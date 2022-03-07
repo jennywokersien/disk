@@ -58,3 +58,4 @@ CREATE TABLE disk_has_borrower (
 	borrowed_date			DATETIME2 NOT NULL,
 	returned_date			DATETIME2 NULL
 );
+/**** End of Project 1 ****/
