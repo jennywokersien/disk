@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -13,6 +14,7 @@ namespace DiskInventory.Models
         }
 
         public int DiskId { get; set; }
+        [Required(ErrorMessage ="Please enter a Disk Name.")]
         public string DiskName { get; set; }
         public DateTime ReleaseDate { get; set; }
         public int GenreId { get; set; }
