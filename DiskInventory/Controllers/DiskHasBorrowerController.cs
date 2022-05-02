@@ -61,10 +61,12 @@ namespace DiskInventory.Controllers
                 if (checkOut.DiskHasBorrowerId == 0)
                 {
                     context.DiskHasBorrowers.Add(checkOut);
+                    TempData["message"] = "Checkout added.";
                 }
                 else
                 {
                     context.DiskHasBorrowers.Update(checkOut);
+                    TempData["message"] = "Checkout updated.";
                 }
                 context.SaveChanges();
                 return RedirectToAction("Index", "DiskHasBorrower");
